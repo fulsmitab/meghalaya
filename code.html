@@ -7,7 +7,20 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="main.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: "#062c1e",
+                        moss: "#2d4a3e",
+                        stone: "#e2e8e4",
+                        leaf: "#4ade80"
+                    }
+                }
+            }
+        };
+    </script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -739,55 +752,221 @@
             </div>
         </section>
 
-        <!-- Sanctuary Section -->
-        <section class="py-32 px-6 bg-stone relative overflow-hidden" id="sanctuary">
+        <!-- Highlights Section -->
+        <section class="py-32 px-6 bg-stone relative overflow-hidden" id="highlights">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-24">
-                    <h2 class="heading-serif text-5xl md:text-8xl text-white italic">The Sanctuary</h2>
-                    <p class="text-stone/40 uppercase tracking-[0.5em] text-[10px] mt-6">Living among the canopy</p>
+                <!-- Header -->
+                <div class="text-center mb-20">
+                    <span class="text-leaf text-xs font-bold uppercase tracking-[0.4em]">What Awaits</span>
+                    <h2 class="heading-serif text-5xl md:text-8xl font-bold text-emerald mt-4">
+                        Highlights
+                    </h2>
                 </div>
-                <div class="grid grid-cols-12 gap-8">
-                    <!-- Cloud Cabins -->
-                    <div class="col-span-12 md:col-span-8 group overflow-hidden rounded-[3rem] relative aspect-[16/9]">
-                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDre2ypcC3s2tZ-C-BmNhy85qUhjgcmwamtAy2F5WkzKQE7utUMjGeI0X_2FxLtcByPdJ1A0R5ZvtreJeam9tOSXobpF_wmpBMjeZ7yILjbcnc8DoSoS8a5HKa3XEcBJFlO_Vv2vHeja6dHHVl0b07DHXon063iqyG_j4n0gFHbBt1xGAqG5qsmDSpS5E8TqhO7GlFYgDsuQAH7Vv_CS-ArTv3p6HW-Q13bm9_j9WYz7RBN-KZBkMvTAtGRyKxqC8pr4mF2tCAcChx7');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-emerald/80 to-transparent flex items-end p-12">
-                            <div>
-                                <h4 class="heading-serif text-3xl text-white font-bold">Cloud Cabins</h4>
-                                <p class="text-stone/60 text-sm mt-2 font-light">Glass-walled eco-structures floating above the mist.</p>
-                            </div>
+
+                <!-- Highlights Carousel -->
+                <div class="relative">
+                    <div class="overflow-hidden">
+                        <div id="highlightsTrack" class="highlights-track flex gap-6" style="transform: translateX(0)">
+                    <!-- Opening Fire Ceremony -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?w=600&h=400&fit=crop" alt="Fire ceremony" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Opening Fire Ceremony</h3>
+                            <p class="text-moss/50 text-sm mb-3">Shillong</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A grounding welcome circle to consciously arrive, release mental clutter, and set personal intentions for the journey ahead.
+                            </p>
                         </div>
                     </div>
-                    <!-- The Library -->
-                    <div class="col-span-12 md:col-span-4 group overflow-hidden rounded-[3rem] relative aspect-[3/4]">
-                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_aiH7KKxKOCYOlilefWGadnN1JUobAoNDGtQZCwcYUpjIs7VyKNQodC2ipI_YXkkJPRQdFqEDgoRkWESwfphsvnzBjyWFJXwZ_BbzL6zlFa_ADpDKr-UZ4WGnrqeg5bK8PTr_DEkO2NSzxM48xU-o7nC3LI62xFBfe1hSFijHY7aYvFC10dhrQdsqSZgL3LvIJz8TLKDxKFazyxK2R790AiNwHP9lhrw09EanuX2gNh9scF5a86UMrsU_jBK5b6oXxnW0iImdLyV3');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-emerald/80 to-transparent flex items-end p-12">
-                            <div>
-                                <h4 class="heading-serif text-3xl text-white font-bold">The Library</h4>
-                                <p class="text-stone/60 text-sm mt-2 font-light">A silent space for ancestral study.</p>
-                            </div>
+
+                    <!-- Daily Yoga -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop" alt="Yoga practice" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Daily Yoga, Breathwork & Nervous System Reset</h3>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm mt-3">
+                                Gentle morning practices designed to regulate the body, restore rhythm, and build awareness set against forested hills and open skies.
+                            </p>
                         </div>
                     </div>
-                    <!-- Herbal Kitchen -->
-                    <div class="col-span-12 md:col-span-5 group overflow-hidden rounded-[3rem] relative aspect-[4/5]">
-                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARkPx-zoNxAB0rLuu2z-SJB4S4DNknhgvH-0eMA4GpjhlgMs3lUv4UvHqBW_e-zadGVEGdSgm3ina5rgPSY0WJtgg4EyAA3aVGtfiZ8RARQdaovjX5GogypbXZVnPYpi5JKSYWfep5SmLzrqlBmGdb6coGHkwnKFBYK5i6S9NQ0WSSfmY3Wr4-JBa2P2PIBqsQWVl2QEAwpn-4C326UhDxJ7I5-uDYvej1H3FWqmPAoTWfPaL7TpfazA5rpHQH0sDTDKSK23iVhHnt');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-emerald/80 to-transparent flex items-end p-12">
-                            <div>
-                                <h4 class="heading-serif text-3xl text-white font-bold">Herbal Kitchen</h4>
-                                <p class="text-stone/60 text-sm mt-2 font-light">Farm-to-table Ayurvedic dining.</p>
-                            </div>
+
+                    <!-- 5-Element Journey -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop" alt="Nature elements" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">5-Element Journey</h3>
+                            <p class="text-moss/50 text-sm mb-3">Earth · Water · Fire · Air · Space</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A curated experiential flow across locations using nature, movement, reflection, and ritual to reconnect with balance and inner stability.
+                            </p>
                         </div>
                     </div>
-                    <!-- Root Walkways -->
-                    <div class="col-span-12 md:col-span-7 group overflow-hidden rounded-[3rem] relative aspect-[16/10]">
-                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAK3qlMyNOQh-Qe9j9Q6tm9Di-B51exkpvn724sjZ2CZBTXZUB5zijmYyT25BB_LAmdM61tWZNPPGUBKzOMqyM0aAZjLbo8VkL65-mBnA0y5Ox0tG9dc51xAg8jfM_gy_-s87xnRzogRf0OXE-pUwBnHEuEweVGNU3Z5wMSaW8-HdQZkSk05NjRpwQvrPYMMT6IBcgYTXUjFuRS91sVMvYqIM9FoKZJXrTeSNlrp_Ksmqj1yjSe_3xSW4-S0omL6zhdDJfBBprG4Idr');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-emerald/80 to-transparent flex items-end p-12">
-                            <div>
-                                <h4 class="heading-serif text-3xl text-white font-bold">Root Walkways</h4>
-                                <p class="text-stone/60 text-sm mt-2 font-light">Organic connections between dwellings.</p>
-                            </div>
+
+                    <!-- Waterfall Immersion -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600&h=400&fit=crop" alt="Waterfall" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Waterfall Immersion</h3>
+                            <p class="text-moss/50 text-sm mb-3">Sohra (Cherrapunjee)</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                Time by living waters to slow the mind, reset body rhythms, and experience grounding through sound, touch, and presence.
+                            </p>
                         </div>
+                    </div>
+
+                    <!-- Sacred Silence & Listening -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?w=600&h=400&fit=crop" alt="Village life" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Sacred Silence & Listening</h3>
+                            <p class="text-moss/50 text-sm mb-3">Kongthong (Whistling Village)</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A deeply reflective experience in a village where names are sung, not spoken, inviting intuitive listening and inner stillness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Guided Journaling -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=600&h=400&fit=crop" alt="Journaling" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Guided Journaling & Integration Sessions</h3>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm mt-3">
+                                Structured reflection spaces to process emotions, insights, and shifts focused on clarity rather than analysis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Heart-Opening Cacao Ceremony -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1578899952107-9c72f1122b89?w=600&h=400&fit=crop" alt="Cacao ceremony" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Heart-Opening Cacao Ceremony</h3>
+                            <p class="text-moss/50 text-sm mb-3">Mawphanlur</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A gentle ceremonial evening to reconnect with emotions, soften defenses, and open space for authenticity and connection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Stargazing & Night Stillness -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop" alt="Night sky" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Stargazing & Night Stillness</h3>
+                            <p class="text-moss/50 text-sm mb-3">Mawphanlur</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                Unfiltered skies and quiet nights to cultivate awe, perspective, and a sense of spaciousness beyond routine life.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sacred Grove Walk -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop" alt="Forest walk" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Sacred Grove Walk</h3>
+                            <p class="text-moss/50 text-sm mb-3">Mawphlang</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A mindful walk through ancient forests that invite reverence, grounding, and reflection on our relationship with nature.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- The Art of Doing Nothing -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Peaceful lake" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">The Art of Doing Nothing</h3>
+                            <p class="text-moss/50 text-sm mb-3">Mawphanlur</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                Unstructured time by water allowing rest, presence, and organic integration without pressure to "do."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Closing Circle -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop" alt="Group circle" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Closing Circle & Integration Ritual</h3>
+                            <p class="text-moss/50 text-sm mb-3">Shillong</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A conscious closure to anchor insights, honor the journey, and carry clarity back into daily life.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Nature-Led Free Time -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop" alt="Nature landscape" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Nature-Led Free Time & Personal Integration</h3>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm mt-3">
+                                Unstructured moments woven into the journey—time to walk, sit, rest, or simply be. Allowing insights to settle naturally without force or schedule.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Essential Oils -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=400&fit=crop" alt="Essential oils" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Essential Oils</h3>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm mt-3">
+                                A gentle use of essential oils, lovingly curated in-house for each day of the retreat. Different blends are offered daily, supporting mood, clarity, grounding, or rest in quiet, intuitive ways.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Herbal Infusion -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=400&fit=crop" alt="Herbal tea" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Herbal Infusion</h3>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm mt-3">
+                                A warm, mindful infusion prepared with local herbs and leaves to support digestion, grounding, and gentle nourishment. This ritual invites presence, allowing the body to receive care without stimulation or pressure.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Khasi Food Tour -->
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex-shrink-0 w-80">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop" alt="Local food" class="w-full h-40 object-cover">
+                        <div class="p-8">
+                            <h3 class="heading-serif text-xl text-emerald font-bold">Khasi Food Tour</h3>
+                            <p class="text-moss/50 text-sm mb-3">Shillong</p>
+                            <p class="text-moss/70 font-light leading-relaxed text-sm">
+                                A gentle introduction to Khasi food traditions, experienced not as a tour but as shared nourishment. Simple, home-style flavours offer insight into local culture, connection, and the quiet joy of eating with presence.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                    <!-- Navigation Dots & Arrows -->
+                    <div class="flex items-center justify-center gap-6 mt-10">
+                        <!-- Prev Button -->
+                        <button onclick="moveCarousel(-1)" class="w-12 h-12 rounded-full bg-emerald text-white flex items-center justify-center hover:bg-moss transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+
+                        <!-- Dots -->
+                        <div id="carouselDots" class="flex items-center gap-3">
+                            <button onclick="goToSlide(0)" class="carousel-dot active w-3 h-3 rounded-full"></button>
+                            <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full"></button>
+                            <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full"></button>
+                            <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full"></button>
+                            <button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full"></button>
+                        </div>
+
+                        <!-- Next Button -->
+                        <button onclick="moveCarousel(1)" class="w-12 h-12 rounded-full bg-emerald text-white flex items-center justify-center hover:bg-moss transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -873,5 +1052,6 @@
         </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
