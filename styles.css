@@ -1,0 +1,63 @@
+/* Meghalaya Wellness Retreat - Custom Styles */
+
+:root {
+    --emerald-deep: #062c1e;
+    --moss-wet: #2d4a3e;
+    --stone-grey: #e2e8e4;
+    --living-green: #4ade80;
+    --mist: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--stone-grey);
+    color: var(--emerald-deep);
+}
+
+.heading-serif {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDB7MVPbn5HFlf-n5jJp6PAivm7gE13APmYhdSISA1BHO3c8tsFdK9IxwzLSN2AwUVa23sBsRvbTHXnl27SvVduNTIEdIYxIdic16zzh8N71ERAXTTO8x96LueghKsdO1U3ithvniRuYqNJ2P7GqY4Nid_t79UoDMZfQSMfGkSxh6RvVsjqxwhzRd801OCcj1AXWCHssxhVBfkC4TZoC4S4R0xFnnZaALy4U0Tpm2chx6ZQ-yygUBV6HemsFppqfpNDA30P7wgwhdmO);
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.organic-curve {
+    clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+.root-mask {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+}
+
+/* Navigation link hover effect */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
