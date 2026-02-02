@@ -12,6 +12,12 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: var(--stone-grey);
     color: var(--emerald-deep);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .heading-serif {
